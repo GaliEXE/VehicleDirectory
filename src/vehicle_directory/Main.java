@@ -45,7 +45,6 @@ public class Main {
 					AutomobileInventory.addVehicle(make, model, color, year, mileage);
 				} catch (Exception e) {
 					System.out.println("There Was A Problem Adding Your Vehicle. Error: " + e);
-					scnr.nextLine();
 				}
 				break;
 			case "list":
@@ -54,9 +53,11 @@ public class Main {
 					System.out.println("To See The Cars Listed Number Use Command dir");
 					int userNum = scnr.nextInt();
 					AutomobileInventory.listVehicleByNumber(userNum);
+					scnr.nextLine();
 				} catch (Exception e) {
 					System.out.println("There Was A Problem Listing Your Vehicle. Error: " + e);
 				}
+				scnr.nextLine();
 				break;
 			case "dir":
 				AutomobileInventory.listVehicles();
@@ -90,6 +91,7 @@ public class Main {
 					System.out.println("To See The Cars Listed Number Use Command dir");
 					int userNum4 = scnr.nextInt();
 					AutomobileInventory.removeVehicle(userNum4);
+					scnr.nextLine();
 				} catch (Exception e) {
 					System.out.println("There Was A Problem Removing Your Vehicle. Error: " + e);
 				}
